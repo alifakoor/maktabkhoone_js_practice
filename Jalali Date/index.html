@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jalali Date</title>
+    <style>
+        body{
+            text-align: center;
+            direction: rtl;
+        }
+    </style>
+</head>
+<body onload="showTodayDate()">
+    <h1>امروز: </h1>
+    <p id="date"></p>
+    <script>
+        var showTodayDate = function() {
+            var today = new Date().toLocaleDateString('fa-IR');
+            document.getElementById("date").innerHTML = today;
+        }
+    </script>
+</body>
+</html>

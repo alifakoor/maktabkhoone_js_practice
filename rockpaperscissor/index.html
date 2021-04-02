@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .game{
+            width: 100%;
+            display: flex;
+        }
+        #player1, #player2{
+            width: 50%;
+        }
+        .result{
+            color: tomato;
+        }
+        .start, #playAgain{
+            padding: 10px 20px;
+            border: unset;
+            background-color: teal;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .start[disabled], #playAgain[disabled]{
+            background-color: dimgray;
+            cursor:not-allowed
+        }
+        #winner{
+            color:limegreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Rock Paper Scissor</h2>
+        <div class="game">
+            <div id="player1">
+                <h4>Player 1</h4>
+                <br />
+                <h2 id="resultForPlayer1" class="result"></h2>
+                <br />
+                <button type="button" id="startForPlayer1" class="start" onclick="start(event, 'resultForPlayer1')">Start</button>
+            </div>
+            <div id="player2">
+                <h4>Player 2</h4>
+                <br />
+                <h2 id="resultForPlayer2" class="result"></h2>
+                <br />
+                <button type="button" id="startForPlayer2" class="start" onclick="start(event, 'resultForPlayer2')">Start</button>
+            </div>
+        </div>
+        <div>
+            <h4>WINNER IS :</h4>
+            <h2 id="winner"></h2>
+            <br />
+            <br />
+            <button type="button" id="playAgain" onclick="startAgain(event)" disabled>Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
