@@ -10,8 +10,8 @@ var fifo = function(command, array, element = null) {
     } else if (command === 'Pull') {
         console.log(array[array.length - 1])
         var new_array = []
-        for (var i = 0; i < array.length - 1; i++ ) {
-            new_array[i]  = array[i]
+        for (var j = 0; j < array.length - 1; j++ ) {
+            new_array[j]  = array[j]
         }
         array = new_array
     } else {
